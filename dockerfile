@@ -1,9 +1,9 @@
 FROM node:alpine as builder 
-ENV http_proxy 'http://rgb-proxy.avl.com:8080'
+# ENV http_proxy 'http://rgb-proxy.avl.com:8080'
 WORKDIR /app
 COPY package.json .
-RUN npm config set proxy http://rgb-proxy.avl.com:8080
-RUN npm config set https-proxy http://rgb-proxy.avl.com:8080
+# RUN npm config set proxy http://rgb-proxy.avl.com:8080
+# RUN npm config set https-proxy http://rgb-proxy.avl.com:8080
 RUN npm install
 COPY . .
 RUN npm run build

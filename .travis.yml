@@ -1,6 +1,6 @@
 language: generic 
 sudo: required
-env: http_proxy 'http://rgb-proxy.avl.com:8080'
+# env: http_proxy 'http://rgb-proxy.avl.com:8080'
 services:
     - docker
 
